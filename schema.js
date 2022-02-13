@@ -5,7 +5,7 @@ const JobInfo = new GraphQLObjectType({
 
     fields: ()=>({
 
-    });
+    })
 })
 
 // const schema = new GraphQLSchema({
