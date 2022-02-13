@@ -1,15 +1,184 @@
 [
 
     {
-        "id":"",
+        "id":"1",
         "company_name":"",
-        "country": ""
+        "country": "",
+        "view_count" : "",
+        "time_posted" : "",
+        "applied_count" : "",
+        "bookmark" : "",
+        "team_type" : [],
+        "salary" : "",
+        "min_qual" : [],
+        "prefer_qual" : [],
+        "Description" : "" 
+
+    },
+    {
+        "id":"2",
+        "company_name":"",
+        "country": "",
+        "view_count" : "",
+        "time_posted" : "",
+        "applied_count" : "",
+        "bookmark" : "",
+        "team_type" : [],
+        "salary" : "",
+        "min_qual" : [],
+        "prefer_qual" : [],
+        "Description" : "" 
+
+    },
+    {
+        "id":"3",
+        "company_name":"",
+        "country": "",
+        "view_count" : "",
+        "time_posted" : "",
+        "applied_count" : "",
+        "bookmark" : "",
+        "team_type" : [],
+        "salary" : "",
+        "min_qual" : [],
+        "prefer_qual" : [],
+        "Description" : "" 
+
+    },
+    {
+        "id":"4",
+        "company_name":"",
+        "country": "",
+        "view_count" : "",
+        "time_posted" : "",
+        "applied_count" : "",
+        "bookmark" : "",
+        "team_type" : [],
+        "salary" : "",
+        "min_qual" : [],
+        "prefer_qual" : [],
+        "Description" : "" 
+
+    },
+    {
+        "id":"5",
+        "company_name":"",
+        "country": "",
+        "view_count" : "",
+        "time_posted" : "",
+        "applied_count" : "",
+        "bookmark" : "",
+        "team_type" : [],
+        "salary" : "",
+        "min_qual" : [],
+        "prefer_qual" : [],
+        "Description" : "" 
+
+    },
+    {
+        "id":"6",
+        "company_name":"",
+        "country": "",
+        "view_count" : "",
+        "time_posted" : "",
+        "applied_count" : "",
+        "bookmark" : "",
+        "team_type" : [],
+        "salary" : "",
+        "min_qual" : [],
+        "prefer_qual" : [],
+        "Description" : "" 
+
+    },
+    {
+        "id":"7",
+        "company_name":"",
+        "country": "",
+        "view_count" : "",
+        "time_posted" : "",
+        "applied_count" : "",
+        "bookmark" : "",
+        "team_type" : [],
+        "salary" : "",
+        "min_qual" : [],
+        "prefer_qual" : [],
+        "Description" : "" 
+
+    },
+    {
+        "id":"8",
+        "company_name":"",
+        "country": "",
+        "view_count" : "",
+        "time_posted" : "",
+        "applied_count" : "",
+        "bookmark" : "",
+        "team_type" : [],
+        "salary" : "",
+        "min_qual" : [],
+        "prefer_qual" : [],
+        "Description" : "" 
+
+    },
+    {
+        "id":"9",
+        "company_name":"",
+        "country": "",
+        "view_count" : "",
+        "time_posted" : "",
+        "applied_count" : "",
+        "bookmark" : "",
+        "team_type" : [],
+        "salary" : "",
+        "min_qual" : [],
+        "prefer_qual" : [],
+        "Description" : "" 
+
+    },
+    {
+        "id":"10",
+        "company_name":"",
+        "country": "",
+        "view_count" : "",
+        "time_posted" : "",
+        "applied_count" : "",
+        "bookmark" : "",
+        "team_type" : [],
+        "salary" : "",
+        "min_qual" : [],
+        "prefer_qual" : [],
+        "Description" : "" 
+
+    },
+    {
+        "id":"11",
+        "company_name":"",
+        "country": "",
+        "view_count" : "",
+        "time_posted" : "",
+        "applied_count" : "",
+        "bookmark" : "",
+        "team_type" : [],
+        "salary" : "",
+        "min_qual" : [],
+        "prefer_qual" : [],
+        "Description" : "" 
+
+    },
+    {
+        "id":"12",
+        "company_name":"",
+        "country": "",
+        "view_count" : "",
+        "time_posted" : "",
+        "applied_count" : "",
+        "bookmark" : "",
+        "team_type" : [],
+        "salary" : "",
+        "min_qual" : [],
+        "prefer_qual" : [],
+        "Description" : "" 
 
     }
-
-
-
-
-
 
 ]
