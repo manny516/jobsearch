@@ -5,6 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "nodeserver" : "node server.js",
     "server": "nodemon server.js"
   },
   "dependencies": {
