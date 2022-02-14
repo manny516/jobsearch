@@ -2,14 +2,14 @@ const express =  require("express");
 const {graphqlHTTP} = require("express-graphql");
 const fs = require('fs');
 const path = require('path');
-// const schema = require("./schema");
+const schema = require("./schema");
 
 const app = express();
 
-// app.use("/graphql", graphqlHTTP({
-//     schema,
-//     graphiql : true
-// }))
+app.use("/graphql", graphqlHTTP({
+    schema,
+    graphiql : true
+}))
 
 app.get("/api/jobsearch",(req,res) =>{
     let rawData = fs.readFileSync(path.resolve(__dirname,'jobsearch.json'));

@@ -4,7 +4,8 @@ const {
     GraphQLInt,
     GraphQLString, 
     GraphQLBoolean,
-    GraphQLList
+    GraphQLList,
+    GraphQLSchema
 } = require("graphql");
 
 const JobInfo = new GraphQLObjectType({
@@ -35,10 +36,14 @@ const RootQuery = new GraphQLObjectType({
         jobinfo : {
             type : new GraphQLList(JobInfoType),
             resolve(parent,args){
-                return axios.get();
+                return axios.get('http://localhost:4000/api/jobsearch')
+                .then(res => res.data);
             }
         }
     }
 
+});
 
+module.exports = new GraphQLSchema({
+    query : RootQuery
 })
