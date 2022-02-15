@@ -5,13 +5,14 @@ const {
     GraphQLString, 
     GraphQLBoolean,
     GraphQLList,
+    GraphQLID,
     GraphQLSchema
 } = require("graphql");
 
 const JobInfo = new GraphQLObjectType({
-    name: 'JobInfo',
+    name: 'Jobquery',
     fields: ()=>({
-        id : { type : GraphQLInt },
+        id : { type : GraphQLID },
         company : { type : GraphQLString },
         position : { type : GraphQLString }, 
         location : { type : GraphQLString },
@@ -21,20 +22,19 @@ const JobInfo = new GraphQLObjectType({
         bookmark : {type : GraphQLBoolean} ,
         team_type : {type : GraphQLString},
         salary : {type : GraphQLString},
-        min_qual : {type : GraphQLString},
-        prefer_qual : {type : GraphQLString},
+        min_qual : {type : new GraphQLList(GraphQLString)},
+        prefer_qual : {type : new GraphQLList(GraphQLString)},
         description : {type : GraphQLString}
-
     })
-});
 
+});
 
 const RootQuery = new GraphQLObjectType({
 
     name : 'RootQuery',
     fields : {
-        jobinfo : {
-            type : new GraphQLList(JobInfoType),
+        job : {
+            type : new GraphQLList(JobInfo),
             resolve(parent,args){
                 return axios.get('http://localhost:4000/api/jobsearch')
                 .then(res => res.data);
