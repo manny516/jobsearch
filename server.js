@@ -1,37 +1,23 @@
 const express =  require("express");
 const {graphqlHTTP} = require("express-graphql");
-const { 
-    GraphQLSchema,
-    GraphQLObjectType,
-    GraphQLString,
-
- } = require("graphql");
+const fs = require('fs');
+const path = require('path');
+const schema = require("./schema");
 
 const app = express();
 
-const schema = new GraphQLSchema({
-    query: new GraphQLObjectType({
-        name : "Helloworld",
-        fields: () =>({
-            message : { 
-                type: GraphQLString,
-                resolve: () => 'Hello world'
-            }
-        })
-    })
-    }
-);
+app.use("/graphql", graphqlHTTP({
+    schema,
+    graphiql : true
+}))
 
+app.get("/api/jobsearch",(req,res) =>{
+    let rawData = fs.readFileSync(path.resolve(__dirname,'jobsearch.json'));
+    let jsonParse = JSON.parse(rawData);
+    res.send(jsonParse);
 
-app.use('/graphql',graphqlHTTP({
-    schema : schema,
-    graphiql : true,
-   
-}));
-app.listen(8080., ()=> console.log('Running on server port localhost:8080/graphql'))
+})
 
+const PORT = process.env.PORT || 4000;
 
-// app.get('/server',(req,res) => {
-//     res.send("Graphql is amazing"); 
-// });
-
+app.listen(PORT, ()=> console.log(`Running on server port : ${PORT}`))
