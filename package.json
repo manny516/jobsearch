@@ -7,11 +7,14 @@
     "start": "next start",
     "nodeserver": "node server.js",
     "server": "nodemon server.js",
-    "environment": "concurrently \"npm run server\" \"npm run dev\""
+    "client": "concurrently \"npm run server\" \"npm run dev\""
   },
   "dependencies": {
+    "@apollo/client": "^3.5.8",
+    "apollo-boost": "^0.4.9",
     "axios": "^0.26.0",
     "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
     "express": "^4.17.2",
     "express-graphql": "^0.12.0",
     "graphql": "^15.8.0",
