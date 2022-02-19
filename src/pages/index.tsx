@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { gql } from "@apollo/client";
 import client from "../apollo-client";
 import { ReactChild, ReactFragment, ReactPortal } from 'react';
+import { JobSearches } from '../components/JobSearches';
 
 export async function getStaticProps() {
     const { data } = await client.query({
@@ -44,35 +45,35 @@ export default function Home({ job }) {
              </form>
            </header>
         </article>
-
-          {job.map((job) => (
-            <article key={job.id} className="border-solid border-2 m-2 flex flex-row results-job-search bg-neutral-50 rounded-lg p-8">
+            <JobSearches jobData={job} />
+          {/* {job.map((jobinfo) => (
+            <article key={jobinfo.id} className="border-solid border-2 m-2 flex flex-row results-job-search bg-neutral-50 rounded-lg p-8">
 
               <article className="m-0 p-4 basis-9/12">
 
                     <blockquote className="w-20 border-solid border-2 float-left h-full mr-4 rounded-lg ">
                       <img src="" alt="" />
                     </blockquote>
-                    <h2> {job.company}</h2>
-                    <p> {job.position}</p>
+                    <h2> {jobinfo.company}</h2>
+                    <p> {jobinfo.position}</p>
                     <blockquote>
-                      <span> {job.location}</span>  <span>{job.view_count}</span>
+                      <span> {jobinfo.location}</span>  <span>{jobinfo.view_count}</span>
                     </blockquote>
                     <blockquote>
-                      <span> {job.time_posted}</span> <span>position</span> <span>{job.applied_count}</span>
+                      <span> {jobinfo.time_posted}</span> <span>position</span> <span>{jobinfo.applied_count}</span>
                     </blockquote>
                 </article>
                 
                 <article className="basis-3/12">
                     <blockquote>
-                      <span> {job.bookmark}</span> <span>info </span>
+                      <span> {jobinfo.bookmark}</span> <span>info </span>
                     </blockquote>
-                    <p>{job.team_type}</p>
-                    <span>{job.salary}<strong>/ year</strong> </span>
+                    <p>{jobinfo.team_type}</p>
+                    <span>{jobinfo.salary}<strong>/ year</strong> </span>
                 </article>
 
               </article>
-          ))}
+          ))} */}
         </section>
 
         <section className="jb-side-bar basis-2/5 py-10">

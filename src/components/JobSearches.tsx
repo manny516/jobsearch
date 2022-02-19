@@ -1,23 +1,18 @@
-import { gql } from "@apollo/client";
-import client from "../apollo-client";
+import React from "react";
 
-export async function getStaticProps() {
-    const { data } = await client.query({
-      query: gql`
-        query JobInfo {
-          job {
-            location
-            salary
-            id
-            company
-          }
-        }
-      `,
-    });
+interface Jobinfo{
 
-    return {
-      props: {
-        job: data.job,
-      },
-   };
+
+}
+interface Props {
+
+}
+
+export const JobSearches: React.FC<Props> = () =>{
+
+  return (
+    <div>
+
+    </div>
+  );
 }
