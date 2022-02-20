@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { gql } from "@apollo/client";
 import client from "../apollo-client";
-import { ReactChild, ReactFragment, ReactPortal } from 'react';
+import { Key, ReactChild, ReactFragment, ReactPortal } from 'react';
 import { JobSearches } from '../components/JobSearches';
 
 export async function getStaticProps() {
@@ -31,10 +31,7 @@ export async function getStaticProps() {
    };
 }
 
-
-
-
-export default function Home({ job }) {
+export default function Home({job}) {
   return (
    <main className="flex flex-row">
        <section className="jb-main-board basis-3/5 border-solid border-2 py-8 bg-slate-200 ">
@@ -45,35 +42,35 @@ export default function Home({ job }) {
              </form>
            </header>
         </article>
-            <JobSearches jobData={job} />
-          {/* {job.map((jobinfo) => (
-            <article key={jobinfo.id} className="border-solid border-2 m-2 flex flex-row results-job-search bg-neutral-50 rounded-lg p-8">
+            {/* <JobSearches jobData={job} /> */}
+           {job.map((job: Jobinfo) => (
+            <article key={job.id} className="border-solid border-2 m-2 flex flex-row results-job-search bg-neutral-50 rounded-lg p-8">
 
               <article className="m-0 p-4 basis-9/12">
 
                     <blockquote className="w-20 border-solid border-2 float-left h-full mr-4 rounded-lg ">
                       <img src="" alt="" />
                     </blockquote>
-                    <h2> {jobinfo.company}</h2>
-                    <p> {jobinfo.position}</p>
+                    <h2> {job.company}</h2>
+                    <p> {job.position}</p>
                     <blockquote>
-                      <span> {jobinfo.location}</span>  <span>{jobinfo.view_count}</span>
+                      <span> {job.location}</span>  <span>{job.view_count}</span>
                     </blockquote>
                     <blockquote>
-                      <span> {jobinfo.time_posted}</span> <span>position</span> <span>{jobinfo.applied_count}</span>
+                      <span> {job.time_posted}</span> <span>position</span> <span>{job.applied_count}</span>
                     </blockquote>
                 </article>
                 
                 <article className="basis-3/12">
                     <blockquote>
-                      <span> {jobinfo.bookmark}</span> <span>info </span>
+                      <span> {job.bookmark}</span> <span>info </span>
                     </blockquote>
-                    <p>{jobinfo.team_type}</p>
-                    <span>{jobinfo.salary}<strong>/ year</strong> </span>
+                    <p>{job.team_type}</p>
+                    <span>{job.salary}<strong>/ year</strong> </span>
                 </article>
 
               </article>
-          ))} */}
+          ))}
         </section>
 
         <section className="jb-side-bar basis-2/5 py-10">
@@ -127,4 +124,20 @@ export default function Home({ job }) {
       </main> 
    
   )
+}
+
+interface Jobinfo{
+  id : number,
+  company : string,
+  position : string,
+  location : string,
+  view_count : number,
+  time_posted : string,
+  applied_count : number,
+  bookmark : boolean,
+  team_type: string,
+  salary: string,
+  min_qual : Array<string>,
+  prefer_qual : Array<string>,
+  desciption : string 
 }
