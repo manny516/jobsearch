@@ -26,7 +26,7 @@ export default function Jobitem({jobData} : any) {
                     </blockquote>
                 </article>
                 
-                <article className="basis-3/12 text-slate-500 ">
+                <article className="basis-3/12 text-slate-500">
                     <blockquote className='flex flex-row gap-2 justify-end pb-4 text-stone-400'>
                       <span data-attribute={job.bookmark}><FaBookmark /></span> <span><FaInfoCircle/> </span>
                     </blockquote>
