@@ -22,7 +22,7 @@ export default function Jobitem({jobData} : any) {
                     <blockquote className=' flex text-slate-500 gap-4'>
                       <span> {job.time_posted}</span> 
                       <span><FaCircle className='inline-block  mr-1'/> position</span> 
-                      <span><FaCircle className='inline-block  mr-1 text-xs' /> {job.applied_count}</span>
+                      <span><FaCircle className='inline-block  mr-1 text-xs' /> {job.applied_count} applied</span>
                     </blockquote>
                 </article>
                 
