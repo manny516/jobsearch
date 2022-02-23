@@ -16,6 +16,6 @@
     "incremental": true,
     "noImplicitAny": true,
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/JobSearches.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/comps/*.tsx"],
   "exclude": ["node_modules"]
 }
