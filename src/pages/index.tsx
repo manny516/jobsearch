@@ -2,8 +2,8 @@ import Head from 'next/head';
 import { gql } from "@apollo/client";
 import client from "../apollo-client";
 import { Key, ReactChild, ReactFragment, ReactPortal } from 'react';
-import {FaRegCommentDots} from "react-icons/fa";
-import Jobitem from '../comp/Jobitems';
+import {FaRegCommentDots,FaBookmark,FaInfoCircle,FaEye,FaMapMarker,FaCircle} from "react-icons/fa";
+import Jobitem from '../comps/Jobitems';
 
 export async function getStaticProps() {
     const { data } = await client.query({
@@ -99,3 +99,18 @@ export default function Home({job} : any) {
   )
 }
 
+interface Jobinfo{
+  id : number,
+  company : string,
+  position : string,
+  location : string,
+  view_count : number,
+  time_posted : string,
+  applied_count : number,
+  bookmark : boolean,
+  team_type: string,
+  salary: string,
+  min_qual : Array<string>,
+  prefer_qual : Array<string>,
+  desciption : string 
+}
