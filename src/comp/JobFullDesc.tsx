@@ -1,19 +1,41 @@
 import {FaRegCommentDots} from "react-icons/fa";
 import { useRouter } from 'next/router';
+import { gql, useQuery } from '@apollo/client';
 
+ const jobDesc = gql`
+          query JobFullData {
+              job{
+                id
+                salary
+                time_posted
+                min_qual
+                description
+                company
+              }
+          }
+        `;
 
-function JobFullDesc(){
-      const router = useRouter()
+export default function JobFullDesc( ){
+    const{loading,error,data} = useQuery(jobDesc);
+    const JobDescResult = {data};
+    const router = useRouter();
       const { pid } = router.query;
+    if(loading == false){
+       const Results = JobDescResult.data.job;
+       if(pid === Results[1].id){
+        console.log(`Page id${pid}`)
+      }
+    }
+      
     return (
-
+    
         <article className="px-10 ">
            <h2> Job results : {pid} </h2>
 
 
            <article className="text-center">
              <img src="" alt="" className="w-60 h-60 m-auto border-solid border-2 rounded-lg" />
-             <h2> Job title info </h2>
+             <h2> Job info </h2>
              <p>Job subtitle information</p>
            </article>
 
@@ -55,6 +77,3 @@ function JobFullDesc(){
     )
 
 }
-
-
-export default JobFullDesc;
