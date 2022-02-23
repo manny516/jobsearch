@@ -16,6 +16,10 @@
     "incremental": true,
     "noImplicitAny": true,
   },
+<<<<<<< HEAD
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/comp/*.tsx"],
+=======
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/comps/*.tsx"],
+>>>>>>> 941f3c03411b493fb78c9b014e1c839b45739b10
   "exclude": ["node_modules"]
 }
