@@ -11,5 +11,5 @@ export interface Jobinfo{
   salary: string,
   min_qual : Array<string>,
   prefer_qual : Array<string>,
-  desciption : string 
+  description : string 
 }

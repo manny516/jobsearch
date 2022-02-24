@@ -1,3 +1,4 @@
+import {Jobinfo} from "./Jobinterface";
 import {FaRegCommentDots} from "react-icons/fa";
 import { useRouter } from 'next/router';
 import { gql, useQuery } from '@apollo/client';
@@ -38,7 +39,7 @@ export default function JobFullDesc( ){
     return (
      
         Results.filter((jDesc : any) => jDesc.id == pid)
-        .map((jDesc : any) =>(
+        .map((jDesc : Jobinfo) =>(
 
              <article key={jDesc.id} className="px-10 ">
               <h2> Job results</h2>
