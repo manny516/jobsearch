@@ -33,19 +33,16 @@ export async function getStaticProps() {
 
     const  jobitems  = (await client.query({
       query: gql`
-        query JobInfo {
-          job{
-            id
-            company
-            position
-            location
-            view_count
-            time_posted
-            applied_count
-            bookmark
-            team_type
-            salary   
-          },
+        query job {
+          jobs{
+            company{
+              id
+              name
+            }
+            title
+            locationNames  
+            postedAt
+          }
         }
       `,
     }));

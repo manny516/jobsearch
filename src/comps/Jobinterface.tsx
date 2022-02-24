@@ -13,3 +13,18 @@ export interface Jobinfo{
   prefer_qual : Array<string>,
   description : string 
 }
+
+
+
+export interface JobsCheck{
+
+  company : {
+    id : number,
+    name : string
+  },
+  title : string,
+  locationNames : string,
+  postedAt : string,
+  description : string,
+  applyUrl : string
+}
