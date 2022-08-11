@@ -39,36 +39,43 @@ export default function JobFullDesc( ){
     return (
      
         Results.filter((jDesc : any) => jDesc.id == pid)
-        .map((jDesc : Jobinfo) =>(
+        .map(({
+          id,
+          company,
+          location,
+          min_qual,
+          prefer_qual,
+          description,
+        } : Jobinfo) =>(
 
-             <article key={jDesc.id} className="px-10 ">
+             <article key={id} className="px-10 ">
               <h2> Job results</h2>
 
 
               <article className="text-center">
                 <img src="" alt="" className="w-60 h-60 m-auto border-solid border-2 rounded-lg" />
-                <h2> {jDesc.company} </h2>
-                <p>{jDesc.location}</p>
+                <h2> {company} </h2>
+                <p>{location}</p>
               </article>
 
               <article className=" mt-10 border-t-2 border-black">
                 <h3>Minimum qualifications:</h3>
                 <ul className="list-disc pl-8">
-                  {jDesc.min_qual}
+                  {min_qual}
                 </ul>
               </article>
 
               <article className="mt-10">
                 <h3>Preferred qualifications:</h3>
                 <ul className="list-disc pl-8">
-                   {jDesc.prefer_qual}
+                   {prefer_qual}
                   </ul>
               </article>
 
               <article className=" mt-10 border-t-2 border-black">
                 <h3>About Company</h3>
                 <p>
-                 {jDesc.description}
+                 {description}
                 </p>
               </article>
 
